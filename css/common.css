@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "magnet";
+  src: url("../fonts/magnat/NeueMagnatTest-Light.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "magnet";
+  src: url("../fonts/magnat/NeueMagnatTest-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "magnet";
+  src: url("../fonts/magnat/NeueMagnatTest-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "magnet";
+  src: url("../fonts/magnat/NeueMagnatTest-SemiBold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "magnet";
+  src: url("../fonts/magnat/NeueMagnatTest-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "magnet";
+  src: url("../fonts/magnat/NeueMagnatTest-ExtraBold.otf");
+  font-weight: 900;
+}
+body {
+  font-family: "magnet", sans-serif;
+  font-weight: 400;
+  color: #2b0c7d;
+}/*# sourceMappingURL=common.css.map */

@@ -4,8 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-  
+  <header>
+    <a class="header__logo" href="javascript:void(0)">
+      <img src="../images/logo.png" alt="로고" id="logo-image" >
+    </a>
+    <p class="header__motto--wave">
+      <span class="letter">D</span>
+      <span class="letter">O</span>
+      <span class="letter">N</span>
+      <span class="letter">'</span>
+      <span class="letter">T</span>
+      <span class="letter"> </span>
+      <span class="letter"> </span>
+      <span class="letter">D</span>
+      <span class="letter">I</span>
+      <span class="letter">E</span>
+      <span class="letter"> </span>
+      <span class="letter"> </span> 
+      <span class="letter">C</span>
+      <span class="letter">U</span>
+      <span class="letter">R</span>
+      <span class="letter">I</span>
+      <span class="letter">O</span>
+      <span class="letter">U</span>
+      <span class="letter">S</span>
+    </p>
+    <img src="../images/mail.png" class="header__image--shake" alt="메일">
+  </header>
+  <aside></aside>
+  <main>
+
+  </main>
+  <footer></footer>
+  <div class="fullscreen-overlay"></div>
+<script>
+    //글자에 wave 애니메이션
+    document.addEventListener("DOMContentLoaded", function() {
+      const waveText = document.querySelector(".header__motto--wave");
+      const letters = waveText.querySelectorAll(".letter");
+
+      // 각 글자마다 랜덤한 애니메이션 지연과 속도
+      letters.forEach(function(letter) {
+        letter.style.animationDelay = Math.random() * 0.5 + "s";
+        letter.style.animationDuration = Math.random() * 1 + 1 + "s";
+      });
+    });
+
+    // 메일 이미지 요소흔들기
+    const mailImg = document.querySelector('.header__image--shake');
+
+    mailImg.addEventListener('click', function() {
+      this.style.transform = 'rotate(-15deg)';
+      setTimeout(() => {
+        this.style.transform = 'rotate(0deg)'; 
+      }, 500); 
+    });
+
+    //로고 따라 다니기
+    const headerLogo = document.querySelector('.header__logo');
+    const logoImage = headerLogo.querySelector('img');
+    const originalSrc = logoImage.src;
+    const newSrc = '../images/logo_on.png';
+
+    headerLogo.addEventListener('mouseenter', () => {
+      logoImage.src = newSrc;
+    });
+
+    headerLogo.addEventListener('mouseleave', () => {
+      logoImage.src = originalSrc;
+    });
+
+    headerLogo.addEventListener('mousemove', (event) => {
+      updateImagePosition(event);
+    });
+
+    function updateImagePosition(event) {
+      const boundingRect = headerLogo.getBoundingClientRect();
+      const offsetX = event.clientX - boundingRect.left;
+      const offsetY = event.clientY - boundingRect.top;
+      //범위 안에 있다면 움직이고 아니면 reset
+      if (offsetX >= 0 && offsetX <= boundingRect.width && offsetY >= 0 && offsetY <= boundingRect.height) {
+        imageX = offsetX;
+        imageY = offsetY;
+        moveImage();
+      } else {
+        resetImage();
+      }
+    }
+
+    function moveImage() {
+      logoImage.style.left = imageX + 'px';
+      logoImage.style.top = imageY + 'px';
+    }
+
+    function resetImage() {
+      logoImage.src = originalSrc;
+      logoImage.style.transition = 'left 1s, top 1s'; // transition 추가
+      logoImage.style.left = '50%';
+      logoImage.style.top = '50%';
+      // transition이 적용된 후에 transition 속성을 초기화하여 다음에 마우스가 다시 a 태그 영역 안에 들어왔을 때 다시 적용되지 않도록 합니다.
+      setTimeout(() => {
+        logoImage.style.transition = 'none';
+      }, 1000); // transition 시간(1초)이 지난 후에 transition을 초기화합니다.
+    }
+
+    //curious 마우스 올렸을 때 효과
+    // 마우스를 올렸을 때 효과를 활성화하는 함수
+    let isEffectActive = false;
+    function activateEffect() {
+      if(!isEffectActive){
+        isEffectActive = true;
+        const overlay = document.querySelector('.fullscreen-overlay');
+        overlay.style.display = 'block';
+        // 3초 후에 효과를 비활성화
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          isEffectActive = false;
+        }, 2000); // 3000ms = 3초
+      }
+    }
+
+    // 버튼에 호버 했을 때 효과를 활성화
+    document.querySelector('.header__motto--wave').addEventListener('mouseover', activateEffect);
+</script>
 </body>
 </html>

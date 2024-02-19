@@ -1,0 +1,97 @@
+$key-color:#2b0c7d;
+// header
+header{
+  width: 80px;
+  height: 100vh;
+  padding: 16px;
+  border-right: 1px solid $key-color;
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__logo{
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    img{
+      width: 42px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transition: transform 5s ease;
+    }
+  }
+
+  .header__motto--wave {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    .letter {
+      display: inline-block;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover .letter{
+      animation: wave 10s infinite; 
+    }
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      10% { transform: translateX(-3px); } 
+      20% { transform: translateX(0); }
+      30% { transform: translateX(3px); }
+      40% { transform: translateX(0); }
+      50% { transform: translateX(-2px); }
+      60% { transform: translateX(0); }
+      70% { transform: translateX(2px); }
+      80% { transform: translateX(0); }
+      90% { transform: translateX(-1px); }
+      100% { transform: translateX(0); }
+    }
+  }
+
+  .header__image--shake {
+    cursor: pointer;
+    transition: transform 0.5s ease; 
+  }
+}
+
+// main
+main {
+  padding: 300px;
+  height: 2000px;
+}
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 12, 125, 1); /* 반투명한 배경색 */
+  z-index: 9999; /* 다른 요소보다 위에 표시 */
+  display: none;
+  animation: shake 2s infinite alternate; /* shake 애니메이션 적용 */
+}
+/* @keyframes 애니메이션 정의 */
+@keyframes shake {
+  from {
+    transform: translateX(80px); /* 왼쪽으로 흔들림 */
+  }
+  to {
+    transform: translateX(1950px); /* 오른쪽으로 흔들림 */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 스크롤 막기 */
+}
