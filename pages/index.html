@@ -8,14 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <!-- google icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js" defer></script>
 </head>
 <body>
-  <header>
+  <header class="header">
     <a class="header__logo" href="javascript:void(0)">
-      <img src="../images/logo.png" alt="로고" id="logo-image" >
+      <img src="../images/logo.png" alt="로고">
     </a>
     <p class="header__motto--wave">
       <span class="letter">D</span>
@@ -38,103 +41,191 @@
       <span class="letter">U</span>
       <span class="letter">S</span>
     </p>
-    <img src="../images/mail.png" class="header__image--shake" alt="메일">
+    <div class="header__mail modal__wrap">
+      <img src="../images/mail.png" class="header__mail--shake" alt="메일">
+      <div class="header__modal modal">Email copied!</div>
+    </div>
   </header>
   <aside></aside>
   <main>
+    <header>
+      <ul>
+        <li class="box box--on"><a>Works</a></li>
+        <li class="box">About</li>
+        <li class="box">Feed</li>
+      </ul>
 
+      <div class="header--status modal__wrap">
+        <div>
+          <span><span class="header--status__bold">Currently: </span> accepting 1 project starting MID 03 2024</span>
+          
+          <span class="material-symbols-outlined">
+            content_copy
+          </span>
+        </div>
+        <div class="header__modal modal">Email copied!</div>
+      </div>
+
+      <div class="header__watch">
+        <ul class="header__icon">
+          <li><img src="../images/visitior0.png" alt=""></li>
+          <li><img src="../images/visitior1.png" alt=""></li>
+          <li><img src="../images/visitior2.png" alt=""></li>
+          <li><img src="../images/visitior3.png" alt=""></li>
+        </ul>
+        <div class="header__watch--number box">
+          + 4 others
+        </div>
+      </div>
+    </header>
+    <h1></h1>
+
+    <section>
+      <article>
+        <div class="article__title--wrap">
+          <h3>Selected Works</h3>
+          <span class="material-symbols-outlined article--view">
+            grid_view
+            <!--forum_list_bulleted -->
+          </span>
+        </div>
+        <ul class="article__contents">
+          <li class="article__contents__char">
+            <img src="../images/look.png" alt="">
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <div class="article__title--wrap">
+          <h3>Archive</h3>
+          <span class="material-symbols-outlined article--view">
+            grid_view
+            <!--forum_list_bulleted -->
+          </span>
+        </div>
+        <ul class="article__contents">
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+          <li>
+            <div class="article__contents__left">
+              <p>2024</p>
+              <h4>igma.im</h4>
+            </div>
+            <div class="article__contents__right">
+              <div class="box">UI/UX</div>
+              <div class="box">Development</div>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
   </main>
-  <footer></footer>
-  <div class="fullscreen-overlay"></div>
-<script>
-    //글자에 wave 애니메이션
-    document.addEventListener("DOMContentLoaded", function() {
-      const waveText = document.querySelector(".header__motto--wave");
-      const letters = waveText.querySelectorAll(".letter");
-
-      // 각 글자마다 랜덤한 애니메이션 지연과 속도
-      letters.forEach(function(letter) {
-        letter.style.animationDelay = Math.random() * 0.5 + "s";
-        letter.style.animationDuration = Math.random() * 1 + 1 + "s";
-      });
-    });
-
-    // 메일 이미지 요소흔들기
-    const mailImg = document.querySelector('.header__image--shake');
-
-    mailImg.addEventListener('click', function() {
-      this.style.transform = 'rotate(-15deg)';
-      setTimeout(() => {
-        this.style.transform = 'rotate(0deg)'; 
-      }, 500); 
-    });
-
-    //로고 따라 다니기
-    const headerLogo = document.querySelector('.header__logo');
-    const logoImage = headerLogo.querySelector('img');
-    const originalSrc = logoImage.src;
-    const newSrc = '../images/logo_on.png';
-
-    headerLogo.addEventListener('mouseenter', () => {
-      logoImage.src = newSrc;
-    });
-
-    headerLogo.addEventListener('mouseleave', () => {
-      logoImage.src = originalSrc;
-    });
-
-    headerLogo.addEventListener('mousemove', (event) => {
-      updateImagePosition(event);
-    });
-
-    function updateImagePosition(event) {
-      const boundingRect = headerLogo.getBoundingClientRect();
-      const offsetX = event.clientX - boundingRect.left;
-      const offsetY = event.clientY - boundingRect.top;
-      //범위 안에 있다면 움직이고 아니면 reset
-      if (offsetX >= 0 && offsetX <= boundingRect.width && offsetY >= 0 && offsetY <= boundingRect.height) {
-        imageX = offsetX;
-        imageY = offsetY;
-        moveImage();
-      } else {
-        resetImage();
-      }
-    }
-
-    function moveImage() {
-      logoImage.style.left = imageX + 'px';
-      logoImage.style.top = imageY + 'px';
-    }
-
-    function resetImage() {
-      logoImage.src = originalSrc;
-      logoImage.style.transition = 'left 1s, top 1s'; // transition 추가
-      logoImage.style.left = '50%';
-      logoImage.style.top = '50%';
-      // transition이 적용된 후에 transition 속성을 초기화하여 다음에 마우스가 다시 a 태그 영역 안에 들어왔을 때 다시 적용되지 않도록 합니다.
-      setTimeout(() => {
-        logoImage.style.transition = 'none';
-      }, 1000); // transition 시간(1초)이 지난 후에 transition을 초기화합니다.
-    }
-
-    //curious 마우스 올렸을 때 효과
-    // 마우스를 올렸을 때 효과를 활성화하는 함수
-    let isEffectActive = false;
-    function activateEffect() {
-      if(!isEffectActive){
-        isEffectActive = true;
-        const overlay = document.querySelector('.fullscreen-overlay');
-        overlay.style.display = 'block';
-        // 3초 후에 효과를 비활성화
-        setTimeout(() => {
-          overlay.style.display = 'none';
-          isEffectActive = false;
-        }, 2000); // 3000ms = 3초
-      }
-    }
-
-    // 버튼에 호버 했을 때 효과를 활성화
-    document.querySelector('.header__motto--wave').addEventListener('mouseover', activateEffect);
-</script>
+  <footer>
+    <p class="footer__license">2019-2024©</p>
+    <ul class="footer__link">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="footer__location">
+      <span class="material-symbols-outlined">
+        public      
+      </span>
+      <span>
+        76°00'01.0"N 29°59'33.9"W
+      </span>
+    </div>
+  </footer>
+  <div class="fullscreen--overlay"></div>
+  
 </body>
 </html>
