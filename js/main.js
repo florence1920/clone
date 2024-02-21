@@ -70,7 +70,6 @@ function resetImage() {
 
 //curious 마우스 올렸을 때 효과
 // 마우스를 올렸을 때 효과를 활성화하는 함수
-const body = document.querySelector('body');
 
 let isEffectActive = false;
 function activateEffect() {
@@ -82,7 +81,7 @@ function activateEffect() {
     setTimeout(() => {
       overlay.style.display = 'none';
       isEffectActive = false;
-    }, 2000); // 3000ms = 3초
+    }, 2000); 
   }
 }
 
@@ -98,3 +97,65 @@ document.querySelectorAll('.modal__wrap').forEach( wrap => {
     }, 1000); 
   })
 })
+
+
+//grid li 에 hover 했을 때 
+document.querySelectorAll('.article__contents--grid > li').forEach( li => {
+  li.addEventListener('mouseenter', function() {
+    this.querySelector('.contents__cover').style.opacity = 1;
+  })
+  li.addEventListener('mouseleave', function() {
+    this.querySelector('.contents__cover').style.opacity = 0;
+  })
+})
+
+//display grid, flex 교체
+const flexEl = document.querySelector('.article__contents--flex');
+const gridEl = document.querySelector('.article__contents--grid');
+const viewIcon = document.querySelector('.article--view');
+let isGrid = false;
+
+document.querySelector('.article--view').addEventListener('click',()=>{
+  if(!isGrid){
+    gridEl.style.display = 'grid';
+    flexEl.style.display = 'none';
+    viewIcon.innerHTML = 'view_list';
+    isGrid =! isGrid
+  }else if(isGrid){
+    gridEl.style.display = 'none';
+    flexEl.style.display = 'block';
+    viewIcon.innerHTML = 'grid_view';
+    isGrid =! isGrid
+  }
+})
+
+// 스크롤 할 때 요소 skew
+let isScrolling = false;
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+  let selectedWorks = document.querySelector('article');
+  let scrollPosition = window.scrollY;
+  
+  if (scrollPosition > lastScrollTop && !isScrolling) {
+    // 스크롤이 아래로 내려갈 때
+    selectedWorks.classList.add('scrolled');
+    selectedWorks.classList.remove('scrolled-reverse');
+    isScrolling = true;
+    setTimeout(function() {
+      isScrolling = false;
+      selectedWorks.classList.remove('scrolled');
+    }, 200);
+  } else if (scrollPosition < lastScrollTop && !isScrolling) {
+    // 스크롤이 위로 올라갈 때
+    selectedWorks.classList.add('scrolled-reverse');
+    selectedWorks.classList.remove('scrolled');
+    isScrolling = true;
+    setTimeout(function() {
+      isScrolling = false;
+      selectedWorks.classList.remove('scrolled-reverse');
+    }, 200);
+  }
+  
+  lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition; // 스크롤 위치 업데이트
+});

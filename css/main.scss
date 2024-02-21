@@ -1,4 +1,7 @@
 $key-color:#2b0c7d;
+@function get-work-image-url($index) {
+  @return url("../images/works/work#{$index}.png");
+}
 // header
 header.header{
   width: 80px;
@@ -118,23 +121,119 @@ main {
       }
     }
   }
-  
+
   section{
-    padding:300px 100px 0;
+    padding:100px 100px 0;
+    .text__container{
+      font-family: "Rubik Scribble", system-ui;
+      margin-bottom: 100px;
+      line-height: 1.2;
+      overflow: hidden;
+      white-space: nowrap;
+      &:hover h3{
+        transform: translateX(-820px);
+      }
+      h3{
+        font-size: 150px;
+        transition: transform 1.5s ease;
+      }
+    }
     article{
+      transform-origin: left top;
+      transition: transform 0.5s ease;
       margin-bottom: 50px;
       width: 100%;
-      .article__title--wrap{
+      &.scrolled{
+        transform: skewY(1deg);
+      }
+      &.scrolled-reverse{
+        transform: skewY(-1deg);
+      }
+      .article__title--wrap {
         display: flex;
         align-items: center;
         font-weight: 100;
-        .article--view{
+        .article--view {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
           display: block;
-          margin-left: 10px;
+          margin:5px 0 0 15px;
+        }
+        img {
+          margin-left: auto;
         }
       }
-      .article__contents{
-        position: relative;
+      
+      .article__contents--grid{
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 50px;
+        
+        > li {
+          width: 100%;
+          height: 260px;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          position: relative;
+          // background-image: url(../images/works/work1.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+              background-image: get-work-image-url($i);
+            }
+          }
+          .contents__cover{
+            transition: opacity 0.5s ease;
+            opacity: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 10px 10px;
+            .inner{
+              width: 100%;
+              padding: 0 20px 20px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: 1.2rem;
+              color: #fff;
+              h4 {
+                width: 145px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .cover__right{
+                display: flex;
+                font-weight: normal;
+                color: $key-color;
+                .cover__right__circle{
+                  width: 40px;
+                  height: 40px;
+                  margin-left: 15px;
+                  background-color: #fff;
+                  border-radius: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+              }
+            }
+          }
+        }
+      }
+      .article__contents--flex{
+        
         > li:not(.article__contents__char) {
           width: 100%;
           height: 74px;
@@ -157,6 +256,7 @@ main {
             h4 {
               margin-left: 20px;
               font-size: 1.5rem;
+              font-weight: 100;
             }
           }
           .article__contents__right .box{
@@ -164,14 +264,7 @@ main {
             padding: 5px 10px;
           }
         }
-        .article__contents__char{
-          position: absolute;
-          top: -60px;
-          right: 0;
-          img {
 
-          }
-        }
       }
     }
   }
@@ -229,7 +322,7 @@ footer{
   width: 100%;
   height: 100%;
   background-color: rgba(43, 12, 125, 1); 
-  z-index: 9999; 
+  z-index: 1; 
   display: none;
   animation: shake 2s infinite alternate;
 }
@@ -241,3 +334,5 @@ footer{
     transform: translateX(1950px); 
   }
 }
+
+
