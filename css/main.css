@@ -12,6 +12,7 @@ header.header {
   align-items: center;
 }
 header.header .header__logo {
+  cursor: none;
   display: block;
   width: 100%;
   height: 100px;
@@ -107,7 +108,6 @@ main header .header--status {
   position: relative;
 }
 main header .header--status > :first-child {
-  cursor: pointer;
   display: flex;
   align-items: center;
   padding: 10px 14px;
@@ -169,11 +169,10 @@ main section article .article__title--wrap {
   font-weight: 100;
 }
 main section article .article__title--wrap .article--view {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
   display: block;
-  margin: 5px 0 0 15px;
+  padding: 12px;
+  width: 50px;
+  height: 50px;
 }
 main section article .article__title--wrap img {
   margin-left: auto;
@@ -191,7 +190,6 @@ main section article .article__contents--grid > li {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 main section article .article__contents--grid > li:nth-child(1) {
   background-image: url("../images/works/work1.png");
@@ -282,7 +280,7 @@ main section article .article__contents--grid > li .contents__cover .inner .cove
   justify-content: center;
   align-items: center;
 }
-main section article .article__contents--flex > li:not(.article__contents__char) {
+main section article .article__contents--flex > li {
   width: 100%;
   height: 74px;
   padding: 0 30px;
@@ -292,23 +290,50 @@ main section article .article__contents--flex > li:not(.article__contents__char)
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  transition: background-color 0.5s;
 }
-main section article .article__contents--flex > li:not(.article__contents__char) > div {
+main section article .article__contents--flex > li:nth-child(5n+1):hover {
+  background-color: rgb(248, 234, 255);
+}
+main section article .article__contents--flex > li:nth-child(5n+2):hover {
+  background-color: rgb(240, 250, 255);
+}
+main section article .article__contents--flex > li:nth-child(5n+3):hover {
+  background-color: rgb(255, 244, 240);
+}
+main section article .article__contents--flex > li:nth-child(5n+4):hover {
+  background-color: rgb(252, 251, 228);
+}
+main section article .article__contents--flex > li:nth-child(5n+5):hover {
+  background-color: rgb(255, 241, 241);
+}
+main section article .article__contents--flex > li > div {
   display: flex;
   align-items: center;
 }
-main section article .article__contents--flex > li:not(.article__contents__char) .article__contents__left p {
+main section article .article__contents--flex > li:hover .article__contents__left h4 {
+  font-size: 2rem;
+  transform-origin: left;
+  transform: skewY(-1.2deg);
+}
+main section article .article__contents--flex > li .article__contents__left p {
   font-size: 0.8rem;
   font-weight: 100;
 }
-main section article .article__contents--flex > li:not(.article__contents__char) .article__contents__left h4 {
+main section article .article__contents--flex > li .article__contents__left h4 {
   margin-left: 20px;
   font-size: 1.5rem;
   font-weight: 100;
+  transition: 0.5s;
 }
-main section article .article__contents--flex > li:not(.article__contents__char) .article__contents__right .box {
+main section article .article__contents--flex > li .article__contents__right .box {
   margin: 0 0 0 5px;
   padding: 5px 10px;
+}
+main section article .article__contents--flex > li .img--hover {
+  position: absolute;
+  display: none;
 }
 
 footer {
@@ -327,7 +352,7 @@ footer .footer__link {
   flex: 0 0 50%;
 }
 footer .footer__link > li {
-  cursor: pointer;
+  padding: 10px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -361,7 +386,7 @@ footer .footer__location {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(43, 12, 125);
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 1;
   display: none;
   animation: shake 2s infinite alternate;

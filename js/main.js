@@ -159,3 +159,73 @@ window.addEventListener('scroll', function() {
   
   lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition; // 스크롤 위치 업데이트
 });
+
+
+//마우스 스크롤 gsap
+let cursor = document.querySelector('.cursor');
+let cursorScale = document.querySelectorAll('.cursor-scale'); 
+let mouseX = 0;
+let mouseY = 0;
+
+gsap.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function(){
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY,
+      }
+    })
+  }
+});
+
+window.addEventListener('mousemove', (e)=> {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+})
+
+cursorScale.forEach(link => {
+  link.addEventListener('mousemove', ()=> {
+    cursor.classList.add('grow'); 
+    if (link.classList.contains('small')){
+      cursor.classList.remove('grow');
+      cursor.classList.add('grow-small');
+    }
+  });
+  
+  link.addEventListener('mouseleave', ()=> {
+    cursor.classList.remove('grow');
+    cursor.classList.remove('grow-small');
+  });
+})
+
+//li 마우스 hover 이미지 그 자리에 등장
+let imgHoverTimer; 
+
+const liElements = document.querySelectorAll('.article__contents--flex > li');
+
+liElements.forEach(li => {
+  const imgHover = li.querySelector('.img--hover'); 
+
+  // .img--hover 요소가 있는 경우에만 이벤트 리스너 등록
+  if (imgHover) {
+    li.addEventListener('mouseenter', function(event) {
+      imgHover.style.display = 'block';
+      imgHover.style.left = event.clientX - this.getBoundingClientRect().left + 'px';
+      imgHover.style.top = event.clientY - this.getBoundingClientRect().top + -100 + 'px';
+
+      clearTimeout(imgHoverTimer);
+
+      //이미지 숨기기
+      imgHoverTimer = setTimeout(() => {
+        imgHover.style.display = 'none';
+      }, 1000);
+    });
+
+    li.addEventListener('mouseleave', function(event) {
+      imgHover.style.display = 'none';
+
+      clearTimeout(imgHoverTimer);
+    });
+  }
+});

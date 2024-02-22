@@ -17,6 +17,7 @@ header.header{
   align-items: center;
 
   .header__logo{
+    cursor:none;
     display: block;
     width: 100%;
     height: 100px;
@@ -32,6 +33,7 @@ header.header{
   }
 
   .header__motto--wave {
+    
     font-family: "Shadows Into Light", cursive;
     font-size: 16px;
     font-weight: bold;
@@ -63,6 +65,7 @@ header.header{
   .header__mail{
     position: relative;
     .header__mail--shake {
+      
       transition: transform 0.5s ease; 
     }
 
@@ -92,7 +95,7 @@ main {
       padding: 10px 14px;
       position: relative;
       > :first-child {
-        cursor: pointer;
+        
         display: flex;
         align-items: center;
         padding: 10px 14px;
@@ -154,11 +157,11 @@ main {
         align-items: center;
         font-weight: 100;
         .article--view {
-          width: 30px;
-          height: 30px;
-          cursor: pointer;
           display: block;
-          margin:5px 0 0 15px;
+          padding: 12px;
+          width: 50px;
+          height: 50px;
+          
         }
         img {
           margin-left: auto;
@@ -179,7 +182,7 @@ main {
           // background-image: url(../images/works/work1.png);
           background-size: cover;
           background-repeat: no-repeat;
-          cursor: pointer;
+          
           @for $i from 1 through 15 {
             &:nth-child(#{$i}) {
               background-image: get-work-image-url($i);
@@ -234,7 +237,7 @@ main {
       }
       .article__contents--flex{
         
-        > li:not(.article__contents__char) {
+        > li{
           width: 100%;
           height: 74px;
           padding: 0 30px;
@@ -244,9 +247,35 @@ main {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          position: relative;
+          transition: background-color .5s;
+          &:nth-child(5n + 1):hover {
+            background-color: rgb(248, 234, 255);
+          }
+        
+          &:nth-child(5n + 2):hover {
+            background-color: rgb(240, 250, 255);
+          }
+        
+          &:nth-child(5n + 3):hover {
+            background-color: rgb(255, 244, 240);
+          }
+        
+          &:nth-child(5n + 4):hover {
+            background-color: rgb(252, 251, 228);
+          }
+        
+          &:nth-child(5n + 5):hover {
+            background-color: rgb(255, 241, 241);
+          }
           > div{
             display: flex;
             align-items: center;
+          }
+          &:hover .article__contents__left h4{
+            font-size: 2rem;
+            transform-origin: left;
+            transform: skewY(-1.2deg);
           }
           .article__contents__left{
             p {
@@ -257,11 +286,16 @@ main {
               margin-left: 20px;
               font-size: 1.5rem;
               font-weight: 100;
+              transition:.5s;
             }
           }
           .article__contents__right .box{
             margin: 0 0 0 5px;
             padding: 5px 10px;
+          }
+          .img--hover{
+            position: absolute;
+            display: none;
           }
         }
 
@@ -285,7 +319,8 @@ footer{
     gap: 50px;
     flex: 0 0 50%;
     > li {
-      cursor: pointer;
+      padding: 10px;
+      
       width: 12px;
       height: 12px;
       border-radius: 50%;
@@ -321,7 +356,7 @@ footer{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(43, 12, 125, 1); 
+  background-color: rgba(255, 255, 255, 0.8); 
   z-index: 1; 
   display: none;
   animation: shake 2s infinite alternate;

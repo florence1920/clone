@@ -1,0 +1,126 @@
+.about header.header {
+  border-right: 1px solid #fff;
+}
+.about main header .header--status > :first-child {
+  background: none;
+  border: 1px solid #fff;
+}
+.about section article .article__contents--flex > li {
+  border: 1px solid rgba(255, 255, 255, 0.3294117647);
+}
+.about section article .article__contents--flex > li:nth-child(5n+1):hover {
+  background: none;
+}
+.about section article .article__contents--flex > li:nth-child(5n+2):hover {
+  background: none;
+}
+.about section article .article__contents--flex > li:nth-child(5n+3):hover {
+  background: none;
+}
+.about section article .article__contents--flex > li:nth-child(5n+4):hover {
+  background: none;
+}
+.about section article .article__contents--flex > li:nth-child(5n+5):hover {
+  background: none;
+}
+.about section article .article__contents--flex > li:hover .article__contents__left h4 {
+  font-size: 1.5rem;
+  transform: skewY(0deg);
+}
+.about section article .article__contents--flex > li .article__contents__left span {
+  color: #36C5AB;
+}
+.about section article .article__contents--flex > li .article__contents__right {
+  font-size: 1.5rem;
+}
+.about section article .article__contents {
+  margin: 15px 0 50px;
+  padding: 50px 40px 10px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3294117647);
+  border-radius: 10px;
+}
+.about section article .article__contents h4 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.about section article .article__contents h4 span {
+  letter-spacing: -3.5px;
+}
+.about section article .article__contents h4 .animated-letter-0 {
+  animation: changeColor 2s infinite alternate 0s;
+}
+.about section article .article__contents h4 .animated-letter-1 {
+  animation: changeColor 2s infinite alternate 0.1s;
+}
+.about section article .article__contents h4 .animated-letter-2 {
+  animation: changeColor 2s infinite alternate 0.2s;
+}
+.about section article .article__contents h4 .animated-letter-3 {
+  animation: changeColor 2s infinite alternate 0.3s;
+}
+.about section article .article__contents h4 .animated-letter-4 {
+  animation: changeColor 2s infinite alternate 0.4s;
+}
+.about section article .article__contents h4 .animated-letter-5 {
+  animation: changeColor 2s infinite alternate 0.5s;
+}
+.about section article .article__contents h4 .animated-letter-6 {
+  animation: changeColor 2s infinite alternate 0.6s;
+}
+.about section article .article__contents h4 .animated-letter-7 {
+  animation: changeColor 2s infinite alternate 0.7s;
+}
+.about section article .article__contents h4 .animated-letter-8 {
+  animation: changeColor 2s infinite alternate 0.8s;
+}
+.about section article .article__contents h4 .animated-letter-9 {
+  animation: changeColor 2s infinite alternate 0.9s;
+}
+.about section article .article__contents h4 .animated-letter-10 {
+  animation: changeColor 2s infinite alternate 1s;
+}
+.about section article .article__contents h4 .animated-letter-11 {
+  animation: changeColor 2s infinite alternate 1.1s;
+}
+@keyframes changeColor {
+  0% {
+    color: #f28afd;
+  }
+  9% {
+    color: #37d3ae;
+  }
+  18% {
+    color: #e9c848;
+  }
+  27% {
+    color: #9af4f6;
+  }
+  36% {
+    color: #f28afd;
+  }
+  45% {
+    color: #37d3ae;
+  }
+  54% {
+    color: #e9c848;
+  }
+  63% {
+    color: #9af4f6;
+  }
+  72% {
+    color: #f28afd;
+  }
+  81% {
+    color: #37d3ae;
+  }
+  90% {
+    color: #e9c848;
+  }
+  100% {
+    color: #9af4f6;
+  }
+}
+.about section article .article__contents > ul {
+  margin: 20px 0;
+}/*# sourceMappingURL=index.css.map */

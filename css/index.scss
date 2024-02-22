@@ -1,0 +1,96 @@
+$key-color:#2b0c7d;
+.about{
+  header.header{
+    border-right: 1px solid #fff;
+  }
+
+  main{
+    header{
+      .header--status{
+        > :first-child {
+          background: none;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+
+  section{
+    article{
+      .article__contents--flex{
+        > li{
+          border: 1px solid #ffffff54;
+          &:nth-child(5n + 1):hover {
+            background: none;
+          }
+        
+          &:nth-child(5n + 2):hover {
+            background:none;
+          }
+        
+          &:nth-child(5n + 3):hover {
+            background:none;
+          }
+        
+          &:nth-child(5n + 4):hover {
+            background: none;
+          }
+        
+          &:nth-child(5n + 5):hover {
+            background: none;
+          }
+          &:hover .article__contents__left h4{
+            font-size: 1.5rem;
+            transform: skewY(0deg);
+          }
+          .article__contents__left{
+            span {
+              color: #36C5AB;
+            }
+          }
+          .article__contents__right{
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .article__contents{
+        margin: 15px 0 50px;
+        padding:50px 40px 10px;
+        width: 100%;
+        border: 1px solid #ffffff54;
+        border-radius: 10px;
+        h4 {
+          font-weight: 400;
+          font-size: 2rem;
+          span {
+            letter-spacing: -3.5px;
+          }
+          $delay-between-animations: 0.1s;
+          @for $i from 0 through 11 {
+            .animated-letter-#{$i} {
+              animation: changeColor 2s infinite alternate ($i * $delay-between-animations);
+            }
+          }
+        }
+        @keyframes changeColor {
+          0% { color: #f28afd; }
+          9% { color: #37d3ae; }
+          18% { color: #e9c848; }
+          27% { color: #9af4f6; }
+          36% { color: #f28afd; }
+          45% { color: #37d3ae; }
+          54% { color: #e9c848; }
+          63% { color: #9af4f6; }
+          72% { color: #f28afd; }
+          81% { color: #37d3ae; }
+          90% { color: #e9c848; }
+          100% { color: #9af4f6; }
+        }
+        > ul {
+          margin: 20px 0;
+        }
+      }
+      
+    }
+  }
+}

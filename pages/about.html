@@ -4,11 +4,379 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <!-- google icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
-<body>
-  어바웃 페이지
+<body class="about">
+  <header class="header">
+    <a class="header__logo cursor-scale small" href="javascript:void(0)">
+      <img src="../images/logo-white.png" alt="로고">
+    </a>
+    <p class="header__motto--wave cursor-scale">
+      <span class="letter">D</span>
+      <span class="letter">O</span>
+      <span class="letter">N</span>
+      <span class="letter">'</span>
+      <span class="letter">T</span>
+      <span class="letter"> </span>
+      <span class="letter"> </span>
+      <span class="letter">D</span>
+      <span class="letter">I</span>
+      <span class="letter">E</span>
+      <span class="letter"> </span>
+      <span class="letter"> </span> 
+      <span class="letter">C</span>
+      <span class="letter">U</span>
+      <span class="letter">R</span>
+      <span class="letter">I</span>
+      <span class="letter">O</span>
+      <span class="letter">U</span>
+      <span class="letter">S</span>
+    </p>
+    <div class="header__mail modal__wrap">
+      <img src="../images/mail-white.png" class="header__mail--shake cursor-scale small" alt="메일">
+      <div class="header__modal modal">Email copied!</div>
+    </div>
+  </header>
+  <main>
+    <header>
+      <ul>
+        <li class="box cursor-scale small"><a href="/pages/index.html">Works</a></li>
+        <li class="box box--on cursor-scale small"><a href="/pages/about.html">About</a></li>
+      </ul>
+
+      <div class="header--status modal__wrap">
+        <div class="cursor-scale small">
+          <span><span class="header--status__bold">Currently: </span> accepting 1 project starting MID 03 2024</span>
+          
+          <span class="material-symbols-outlined">
+            content_copy
+          </span>
+        </div>
+        <div class="header__modal modal">Email copied!</div>
+      </div>
+
+      <div class="header__watch cursor-scale">
+        <ul class="header__icon">
+          <li><img src="../images/visitior0-white.png" alt=""></li>
+          <li><img src="../images/visitior1-white.png" alt=""></li>
+          <li><img src="../images/visitior2-white.png" alt=""></li>
+          <li><img src="../images/visitior3-white.png" alt=""></li>
+        </ul>
+        <div class="header__watch--number box">
+          + 4 others
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="text__container cursor-scale">
+        <h3>Lee SH * Designer * Developer *</h3>
+      </div>
+      <article>
+        <div class="article__title--wrap">
+          <h4>Recognitions </h4>
+        </div>
+        <ul class="article__contents--flex">
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>SOTD/Awwwards</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>igma</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>Honorable Mention/Awwwards</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>Mystream</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>Honorable Mention/Awwwards</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>Next.page</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>Interaction/Behance</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>Meteora</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>Interaction/Behance</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>Firebridge</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>Graphic Design/Behance</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>DigitalMoon</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>Honorable Mention/Awwwards</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>Mystream</p>
+            </div>
+          </li>
+
+          <li class="cursor-scale small">
+            <div class="article__contents__left">
+              <span class="material-symbols-outlined">
+                star 
+              </span>
+              <h4>SOTD/Awwwards</h4>
+            </div>
+            <div class="article__contents__right">
+              <p>igma</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <div class="article__title--wrap">
+          <h4>Picture this if you will</h4>
+        </div>
+        <div class="article__contents">
+          <h4>
+            A
+              <span class="animated-letter-0">C</span>
+              <span class="animated-letter-1">r</span>
+              <span class="animated-letter-2">i</span>
+              <span class="animated-letter-3">n</span>
+              <span class="animated-letter-4">g</span>
+              <span class="animated-letter-5">e</span>
+              <span class="animated-letter-6">l</span>
+              <span class="animated-letter-7">o</span>
+              <span class="animated-letter-8">r</span>
+              <span class="animated-letter-9">d</span>
+              <span class="animated-letter-10">'</span>
+              <span class="animated-letter-11">s</span>
+              Nook.
+          </h4>
+          <div class="contents__list--love">
+            <h5>What I Love</h5>
+          </div>
+          <div class="contents__list--hate">
+            <li>2</li>
+          </div>
+          <img class="contents__sticker"/>
+        </div>
+        
+      </article>
+    </section>
+  </main>
+  <div class="cursor"></div>
+  <script>
+  //글자에 wave 애니메이션
+  document.addEventListener("DOMContentLoaded", function() {
+    const waveText = document.querySelector(".header__motto--wave");
+    const letters = waveText.querySelectorAll(".letter");
+
+    // 각 글자마다 랜덤한 애니메이션 지연과 속도
+    letters.forEach(function(letter) {
+      letter.style.animationDelay = Math.random() * 0.5 + "s";
+      letter.style.animationDuration = Math.random() * 1 + 1 + "s";
+    });
+  });
+
+  // 메일 이미지 요소흔들기
+  const mailImg = document.querySelector('.header__mail--shake');
+
+  mailImg.addEventListener('click', function() {
+    this.style.transform = 'rotate(-15deg)';
+    setTimeout(() => {
+      this.style.transform = 'rotate(0deg)'; 
+    }, 500); 
+  });
+
+  //로고 따라 다니기
+  const headerLogo = document.querySelector('.header__logo');
+  const logoImage = headerLogo.querySelector('img');
+  const originalSrc = logoImage.src;
+  const newSrc = '../images/logo-white_on.png';
+
+  headerLogo.addEventListener('mouseenter', () => {
+    logoImage.src = newSrc;
+  });
+
+  headerLogo.addEventListener('mouseleave', () => {
+    logoImage.src = originalSrc;
+  });
+
+  headerLogo.addEventListener('mousemove', (event) => {
+    updateImagePosition(event);
+  });
+
+  function updateImagePosition(event) {
+    const boundingRect = headerLogo.getBoundingClientRect();
+    const offsetX = event.clientX - boundingRect.left;
+    const offsetY = event.clientY - boundingRect.top;
+    //범위 안에 있다면 움직이고 아니면 reset
+    if (offsetX >= 0 && offsetX <= boundingRect.width && offsetY >= 0 && offsetY <= boundingRect.height) {
+      imageX = offsetX;
+      imageY = offsetY;
+      moveImage();
+    } else {
+      resetImage();
+    }
+  }
+
+  function moveImage() {
+    logoImage.style.left = imageX + 'px';
+    logoImage.style.top = imageY + -5 + 'px';
+  }
+
+  function resetImage() {
+    logoImage.src = originalSrc;
+    logoImage.style.transition = 'left 1s, top 1s'; // transition 추가
+    logoImage.style.left = '50%';
+    logoImage.style.top = '50%';
+    // transition이 적용된 후에 transition 속성을 초기화하여 다음에 마우스가 다시 a 태그 영역 안에 들어왔을 때 다시 적용되지 않도록 합니다.
+    setTimeout(() => {
+      logoImage.style.transition = 'none';
+    }, 1000); // transition 시간(1초)이 지난 후에 transition을 초기화합니다.
+  }
+
+
+  //모달 나오는 함수 
+  document.querySelectorAll('.modal__wrap').forEach( wrap => {
+    wrap.addEventListener('click', () => {
+      const modalContent = wrap.querySelector('.modal');
+      modalContent.style.display = 'block';
+      setTimeout(() => {
+        modalContent.style.display = 'none';
+      }, 1000); 
+    })
+  })
+
+
+
+  //스크롤 할 때 요소 skew
+  let isScrolling = false;
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function() {
+    let selectedWorks = document.querySelector('article');
+    let scrollPosition = window.scrollY;
+    
+    if (scrollPosition > lastScrollTop && !isScrolling) {
+      // 스크롤이 아래로 내려갈 때
+      selectedWorks.classList.add('scrolled');
+      selectedWorks.classList.remove('scrolled-reverse');
+      isScrolling = true;
+      setTimeout(function() {
+        isScrolling = false;
+        selectedWorks.classList.remove('scrolled');
+      }, 200);
+    } else if (scrollPosition < lastScrollTop && !isScrolling) {
+      // 스크롤이 위로 올라갈 때
+      selectedWorks.classList.add('scrolled-reverse');
+      selectedWorks.classList.remove('scrolled');
+      isScrolling = true;
+      setTimeout(function() {
+        isScrolling = false;
+        selectedWorks.classList.remove('scrolled-reverse');
+      }, 200);
+    }
+    
+    lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition; // 스크롤 위치 업데이트
+  });
+
+
+//마우스 스크롤 gsap
+let cursor = document.querySelector('.cursor');
+let cursorScale = document.querySelectorAll('.cursor-scale'); 
+let mouseX = 0;
+let mouseY = 0;
+
+gsap.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function(){
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY,
+      }
+    })
+  }
+});
+
+window.addEventListener('mousemove', (e)=> {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+})
+
+cursorScale.forEach(link => {
+  link.addEventListener('mousemove', ()=> {
+    cursor.classList.add('grow'); 
+    if (link.classList.contains('small')){
+      cursor.classList.remove('grow');
+      cursor.classList.add('grow-small');
+    }
+  });
+  
+  link.addEventListener('mouseleave', ()=> {
+    cursor.classList.remove('grow');
+    cursor.classList.remove('grow-small');
+  });
+})
+
+
+  </script>
 </body>
 </html>
