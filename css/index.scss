@@ -17,6 +17,7 @@ $key-color:#2b0c7d;
 
   section{
     article{
+      margin-top: 100px;
       .article__contents--flex{
         > li{
           border: 1px solid #ffffff54;
@@ -59,6 +60,7 @@ $key-color:#2b0c7d;
         width: 100%;
         border: 1px solid #ffffff54;
         border-radius: 10px;
+        position: relative;
         h4 {
           font-weight: 400;
           font-size: 2rem;
@@ -86,11 +88,75 @@ $key-color:#2b0c7d;
           90% { color: #e9c848; }
           100% { color: #9af4f6; }
         }
-        > ul {
-          margin: 20px 0;
+        .contents__list {
+          margin: 50px 0;
+          display: flex;
+          h5{
+            flex-basis: 18%;
+            max-width: 18%;
+          }
+          .contents__list--love, .contents__list--hate{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 72%;
+            max-width: 72%;
+            gap: 10px;
+            >li{
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              padding: 10px 15px;
+              border: 1px solid #ffffff54;
+              border-radius: 50px;
+              span:nth-child(3) {
+                color: #ffffff54;
+                font-weight: 100;
+                font-size: 0.8rem;
+              }
+            }
+          }
+          .contents__list--love{
+            >li{
+              span:nth-child(1){
+                color: #36C2AA;
+              }
+            }
+          }
+          .contents__list--hate{
+            >li{
+              span:nth-child(1){
+                color: #BB68E2;
+              }
+            }
+          }
+        }
+        .contents__sticker{
+          position: absolute;
+          top: -72px;
+          right: 20%;
+          width: 110px;
         }
       }
-      
+    }
+    .article__link{
+      h4{
+        font-size: 0.7rem;
+      }
+      .link__list{
+        display: flex;
+        gap: 5px;
+        margin:30px 0 0;
+        font-size: 1.5rem;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        ::after{
+          content: ',';
+        }
+        :last-child::after{
+          content: '';
+        }
+      }
     }
   }
 }
+

@@ -1,0 +1,93 @@
+@media screen and (max-width: 1440px) {
+  main{
+    header{
+      justify-content: space-between;
+      .header--status{
+        display: none;
+      }
+      .header__watch{
+        flex:0 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header.header{
+    display: none;
+  }
+  main{
+    padding: 0;
+    header{
+      padding: 50px 50px 0;
+    }
+    section{
+      padding:50px 50px 0;
+      .text__container{
+        display: none;
+      }
+    }
+  }
+  footer{
+    padding:50px;
+  }
+} 
+
+@media screen and (max-width: 768px) {
+  main{
+    header{
+      padding:20px 10px 0;
+      .header__watch{
+        display: none;
+      }
+    }
+    section{
+      padding:10px;
+      article{
+        .article__contents--flex{
+          .article__contents__right{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    padding:10px;
+    .footer__link{
+      display: none;
+    }
+    .footer__location{
+      display: none;
+    }
+  }
+  .about{
+    section{
+      article{
+        margin-top: 30px;
+        .article__contents{
+          .contents__list{
+            width: 100%;
+            flex-direction: column;
+            gap: 20px;
+            .contents__list--love, .contents__list--hate{
+              flex-direction: column;
+              max-width: 100%;
+              >li{
+                width: 100%;
+                border-radius: 0;
+                span:nth-child(3) {
+                  display: none;
+                }
+              }
+            }
+          }
+          
+          .contents__sticker{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

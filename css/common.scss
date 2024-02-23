@@ -52,6 +52,7 @@ $key-color:#2b0c7d;
   src: url("../fonts/magnat/NeueMagnatTest-ExtraBold.otf") ; 
   font-weight: 900;
 }
+
 body {
   font-family: "magnet", sans-serif; 
   font-weight: 400;
@@ -59,6 +60,7 @@ body {
   cursor: none;
 }
 
+// 커서 관련
 .cursor{
   position: fixed;
   width: 40px;
@@ -88,12 +90,10 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 
-  /* 스크롤바 트랙 스타일 */
   &-track {
     background-color: #ffffff; 
   }
 
-  /* 스크롤바 썸(글씨) 스타일 */
   &-thumb {
     background-color: $key-color; 
   }
@@ -103,6 +103,7 @@ a:hover, a:active {
 	text-decoration: none; 
 	color:#2b0c7d;
 }
+
 .about{
   background-color: $key-color;
   color: #fff;
