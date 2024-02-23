@@ -11,7 +11,7 @@ ___
 ___
 ### 페이지 소개 
 #### 1. Work 페이지
-![Work1](./images/readme/work1.png)
+![work1](./images/readme/work1.png)
 ##### 헤더 부분
 - 왼쪽에 위치한 헤더를 `position:fixed` 로 고정하고 메인에 `padding`을 줘서 전체적인 레이아웃 구성
 - 로고 부분에 마우스를 올리면 영역 내에서 마우스를 따라다니는 동작 구현
